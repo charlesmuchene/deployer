@@ -1,0 +1,35 @@
+buildscript {
+
+    ext{
+        kotlinVersion = '1.2.30'
+        gradlePluginVersion = '3.0.1'
+    }
+
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:$gradlePluginVersion"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    timberVersion = '4.5.1'
+    pwmSpeakerVersion = '0.2'
+    coroutineVersion = '0.22.5'
+    supportLibVersion = '27.1.0'
+    thingsVersion = '0.6.1-devpreview'
+}
